@@ -10,9 +10,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tags', function (Blueprint $table) {
-            $table->id();                      // Primary key
-            $table->string('code')->unique();  // Code du tag, ex: "TP", "EXAM", "PHP"
-            $table->string('label')->nullable(); // Libellé lisible: "Travaux pratiques", "Examen", etc.
+            $table->id();                     
+            $table->string('code')->unique();  
+            $table->string('label')->nullable(); 
             $table->timestamps();
         });
     }
