@@ -11,8 +11,8 @@ return new class extends Migration
     {
       Schema::create('resource_views', function (Blueprint $table) {
     $table->id();
-    $table->foreignId('resource_id')->constrained('ressources')->onDelete('cascade');
-    $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('set null'); // étudiant optionnel
+    $table->foreignId('resource_id')->constrained('resources')->onDelete('cascade');
+    $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('set null'); 
     $table->timestamp('viewed_at')->useCurrent();
     $table->timestamps();
 });
